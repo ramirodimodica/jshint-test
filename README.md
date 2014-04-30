@@ -8,6 +8,9 @@
 
 ## Folder Structure: (TODO: update this)
 -------------------------
+
+``` unicode
+
   .
   ├── result
   │   ├──css
@@ -30,3 +33,5 @@
   ├── README.md
   ├── Gruntfile.js
   └── packgage.json
+
+```
