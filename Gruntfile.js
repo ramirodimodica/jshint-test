@@ -3,27 +3,31 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
     jshint: {
-      all: ['Gruntfile.js', 'lib/*/.js', 'test/*.js'],
+      all: ['Gruntfile.js', 'test/*.js'],
       justResult: ['result/*.js']
     },
+
     concat: {
       js: {
         src: ['test/*.js'],
         dest: 'result/all.js',
       },
       css: {
-        src: ['src/main.js', 'src/extras.js'],
-        dest: 'dist/with_extras.js',
+        src: ['test/*.css'],
+        dest: 'result/all.css',
       },
     },
+
     uglify: {
-      my_target: {
+      scripts: {
         files: {
-        'result-min/all.min.js': ['result/all.js']
+          'result-min/all.min.js': ['result/all.js']
         }
       }
     }
+
   });
 
   // Load the plugins
